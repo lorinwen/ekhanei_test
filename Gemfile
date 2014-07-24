@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+ruby '2.1.1'
+gem 'cucumber'
+gem 'activerecord','3.2.1'
+gem 'watir-webdriver'
+gem 'page-object'
+gem 'selenium-webdriver' #, '~> 2.35.1'
+gem 'xpath'
+gem 'require_all'
