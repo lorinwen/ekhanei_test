@@ -36,6 +36,9 @@ And (/^I fill the (.*) field$/) do |type_field|
       on_page(FormPage).fill_form(type_field,'This is a text description for Jordi test, i will fill all the gaps')
     when 'price'
       on_page(FormPage).fill_form(type_field,'25')
+    when 'image'
+      on_page(FormPage).click_image
+      on_page(FormPage).upload_image('trust.jpg')
     when 'name'
       on_page(FormPage).fill_form(type_field,'Jordi')
     when 'email'

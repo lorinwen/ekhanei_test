@@ -15,6 +15,7 @@ class FormPage
   text_field(:title,      id:'subject')
   text_area(:ad_text,      id:'body')
   text_field(:price,      id:'price')
+  button(:btnimageupload,      id:'imageupload')
   text_field(:name,       id:'name')
   text_field(:email,      id:'email')
   text_field(:phone,      id:'phone')
@@ -59,4 +60,19 @@ class FormPage
     wait_until{self.btncontinue?}
     self.btncontinue
   end
+
+  def click_image
+    wait_until{self.btnimageupload?}
+    self.btnimageupload
+  end
+
+  def upload_image(img_name)
+    sleep 3
+
+    image_path = File.expand_path(File.join(File.dirname(__FILE__), "../../../../files/uploads/#{img_name}"))
+    puts_debug "DEBUG: the image path is: <#{image_path}>."
+    self.btn_upload = image_path
+    puts_debug 'INFO: image uploaded.'
+  end
+
 end
