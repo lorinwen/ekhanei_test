@@ -9,7 +9,7 @@ Feature: Ad insertion without account and no image uploading
     And I fill the title field
     And I fill the ad text field
     And I fill the price field
-    And I fill the image field
+  #  And I fill the image field
     And I fill the name field
     And I fill the email field
     And I fill the phone field
